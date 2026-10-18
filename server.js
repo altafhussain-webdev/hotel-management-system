@@ -3,20 +3,20 @@ const mongoose =require("mongoose");
 const app =express();
 app.use(express.json());
 app.use(express.static("public"))
-// async function connectDb(){
-//     await mongoose.connect("mongodb://localhost:27017/Maple_Hotel");
-//     console.log("mongodb connected");
-// }
+async function connectDb(){
+    await mongoose.connect("mongodb://localhost:27017/Maple_Hotel");
+    console.log("mongodb connected");
+}
 // async function connectDB(){
 //     await mongoose.connect(process.env.MONGODB_URI);
 //     console.log("mongodb connected");
 // }
 // connectDb();
-async function connectDB(){
-    const uri = process.env.MONGODB_URI || process.env.MONGO_URI;
-    await mongoose.connect(uri);
-    console.log("mongodb connected");
-}
+// async function connectDB(){
+//     const uri = process.env.MONGODB_URI || process.env.MONGO_URI;
+//     await mongoose.connect(uri);
+//     console.log("mongodb connected");
+// }
 connectDB();
 const roomSchema =mongoose.Schema({
 RoomNo:Number,
@@ -74,15 +74,15 @@ res.json({
 
 
 
-// app.listen(3016,(req,res)=>{
-// console.log("server is running")
-// })
+app.listen(3016,(req,res)=>{
+console.log("server is running")
+})
 // Vercel ke liye
-module.exports = app;
+// module.exports = app;
 
-if (require.main === module) {
-  const PORT = 3016;
-  app.listen(PORT, () => {
-    console.log("server is running on " + PORT);
-  });
-}
+// if (require.main === module) {
+//   const PORT = 3016;
+//   app.listen(PORT, () => {
+//     console.log("server is running on " + PORT);
+//   });
+// }
