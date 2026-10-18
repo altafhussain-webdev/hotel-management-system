@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <form action="" id="rooms">
+    <label for="">RoomNo</label><br>
+    <input type="number" name="" id="roomno"><br>
+    <label for="">Price</label><br>
+    <input type="number" name="" id="price"><br>
+    <label for="">Category</label><br>
+    <input type="text" name="" id="category"><br>
+    <label for="">Image</label><br>
+    <input type="text" name="" id="image"><br>
+    <br><button id="submit-button">Order Now</button>
+</form>
+<div>
+<hr class="mt-5">
+<h1 class="text-center mb-4">ROOMS</h1>
+<table class="table table-border">
+<tr>   
+    <th>Image</th>
+    <th>RoomNo</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>ID</th>
+    <th>Action</th>
+</tr>
+<tbody id="admin-room-list"></tbody>
+</table>
+</div>
+<div>
+    <hr class="mt-5">
+<h1 class="text-center mb-4">ROOMS</h1>
+<table class="table table-border">
+<tr>   
+    <th>Customer Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Room ID</th>
+    <th>No Of Guests</th>
+</tr>
+<tbody id="admin-rooms-list"></tbody>
+</table>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
